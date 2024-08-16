@@ -129,9 +129,10 @@ export function Home() {
       return 0;
     }
 
-    setTally(tally + 1);
+    const nt = tally + 1;
+    setTally(nt);
     if (number === g) {
-      const t = tally;
+      const t = nt;
       setVerdict(`You guessed the correct number in ${t} moves!`)
       reset();
     } else if (g > number) {
