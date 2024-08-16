@@ -1,0 +1,20 @@
+.logo {
+  color: #3ab0a1;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.logo::before, .logo::after {
+  content: "";
+  display: inline-block;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border: 5px solid #3ab0a1;
+  box-sizing: content-box;
+  border-radius: 3px;
+  vertical-align: 0.075em;
+  transform: rotate(45deg);
+}
