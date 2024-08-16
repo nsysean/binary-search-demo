@@ -135,10 +135,10 @@ export function Home() {
       const t = nt;
       setVerdict(`You guessed the correct number in ${t} moves!`)
       reset();
-    } else if (g > number) {
-      setVerdict('Your guess is larger than the hidden number!');
+    } else if (number <= g) {
+      setVerdict('The hidden number is smaller or equal to your guess!');
     } else {
-      setVerdict('Your guess is smaller or equal to the hidden number!');
+      setVerdict('The hidden number is larger than your guess!');
     }
   }
 
