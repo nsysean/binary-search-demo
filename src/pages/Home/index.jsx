@@ -137,7 +137,7 @@ export function Home() {
 
     const nt = tally + 1;
     const resp = [
-      `You guessed the correct number in ${nt} moves!`,
+      `You guessed the correct number in ${nt} move${nt == 1 ? '' : 's' }!`,
       "The number you guessed is larger than the hidden number!",
       "The number you guessed is smaller than the hidden number!",
     ];
