@@ -250,7 +250,7 @@ export function Home() {
               icon='mdi:lightbulb' 
               style="transform: translate(4px, -10px) scale(1.1);"
             />
-            {"\u00A0"} How do you guess optimally?{"\u00A0"} <span class="hint2">visit https://dbs.chall.mov to try for yourself</span>
+            {"\u00A0"} How do you guess optimally?
         </Button>
       </div>
       <div class="adaptive">
