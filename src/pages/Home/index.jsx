@@ -22,6 +22,8 @@ export function Home() {
     setTally(0);
     const no = Math.floor(Math.random() * 100) + 1;
     setNumber(no);
+    setL(1);
+    setR(100);
   };
 
   const getFullScreenElement = () => {
@@ -159,11 +161,7 @@ export function Home() {
         return 0;
       }
       const [ls, rs] = [g - l, r - g];
-      if (ls == rs) {
-        setAmode(false);
-        setNumber(Math.floor(Math.random() * (r - l + 1) + r));
-      }
-      if (ls < rs || (ls == rs && Math.floor(Math.random()) * 2 == 1)) {
+      if (ls < rs || (ls == rs && Math.floor(Math.random() * 2) == 1)) {
         setVerdict(resp[2]);
         setL(g + 1);
       } else {
