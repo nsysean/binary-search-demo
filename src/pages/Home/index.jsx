@@ -244,6 +244,15 @@ export function Home() {
           <Icon icon="mingcute:refresh-3-fill" />
         </Button>
       </div>
+      <div class="hint">
+        <Button CTA={true} onClick={() => {}}>
+            <Icon
+              icon='mdi:lightbulb' 
+              style="transform: translate(4px, -10px) scale(1.1);"
+            />
+            {"\u00A0"} How do you guess optimally?{"\u00A0"} <span class="hint2">visit https://dbs.chall.mov to try for yourself</span>
+        </Button>
+      </div>
       <div class="adaptive">
         <Button CTA={true} onClick={() => setAmode(tally != 0 ? amode : !amode)}>
           <Icon

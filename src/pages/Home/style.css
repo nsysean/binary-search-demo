@@ -49,3 +49,14 @@
   bottom: 20px;
   right: 20px;
 }
+
+.hint {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.hint2 {
+  font-size: 1rem;
+  margin-top: .5rem;
+}
