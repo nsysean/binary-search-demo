@@ -14,7 +14,6 @@ export function Home() {
   const [prevent, setPrevent] = useState(false);
   const [guess, setGuess] = useState("");
   const [amode, setAmode] = useState(false);
-  const [pamode, setPamode] = useState(false); // prefers
   const [l, setL] = useState(1);
   const [r, setR] = useState(100);
 
@@ -136,10 +135,6 @@ export function Home() {
       return 0;
     }
 
-    if (tally == 0) {
-      setAmode(pamode);
-    }
-
     const nt = tally + 1;
     const resp = [
       `You guessed the correct number in ${nt} moves!`,
@@ -250,12 +245,12 @@ export function Home() {
         </Button>
       </div>
       <div class="adaptive">
-        <Button CTA={true} onClick={() => setPamode(!pamode)}>
+        <Button CTA={true} onClick={() => setAmode(tally != 0 ? amode : !amode)}>
           <Icon
-            icon={`mdi:${pamode ? "eye" : "dice-3"}`}
+            icon={`mdi:${amode ? "eye" : "dice-3"}`}
             style="transform: translate(4px, -10px) scale(1.1);"
           />
-          {"\u00A0"} {pamode ? "Adaptive" : "Random"}
+          {"\u00A0"} {amode ? "Adaptive" : "Random"}
         </Button>
       </div>
       <form class="wrapper" onSubmit={(e) => {
